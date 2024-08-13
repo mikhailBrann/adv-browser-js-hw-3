@@ -1,0 +1,31 @@
+.game-field-sheet {
+    --cell-in-line: 4;
+    --cell-count: calc(4 * 4);
+    grid-template-columns: repeat(var(--cell-in-line), 1fr);
+    display: grid;
+    aspect-ratio: 1 / 1;
+    width: 600px; 
+    max-width: 100%;
+}
+
+.game-cell {
+    box-sizing: border-box;
+    border-bottom: 3px solid #999;
+    border-right: 3px solid #999;
+}
+
+.game-cell:nth-child(4n) {
+    border-right: none;
+}
+
+.game-cell:nth-child(n + 13) {
+    border-bottom: none;
+}
+
+.game-cell.demon {
+    background-image: url(../img/goblin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
