@@ -1,11 +1,7 @@
-import DemonGame from "./DemonGame/DemonGame";
-import "./DemonGame/css/demon-game.css";
-import "./DemonGame/img/goblin.png";
+import DemonGame from "../components/DemonGame/DemonGame";
+import "../components/DemonGame/css/demon-game.css";
+import "../components/DemonGame/img/goblin.png";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const game = new DemonGame(
-    document.querySelector(".kick-demon__container"),
-    420,
-  );
-  game.renderField();
+  new DemonGame(document.querySelector(".kick-demon__container"), 1000);
 });
